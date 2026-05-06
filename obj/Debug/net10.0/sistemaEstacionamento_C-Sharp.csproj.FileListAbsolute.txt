@@ -12,3 +12,4 @@
 /home/pedro-dos-anjos/sistemaEstacionamento_C-Sharp/obj/Debug/net10.0/sistemaEstacionamento_C-Sharp.pdb
 /home/pedro-dos-anjos/sistemaEstacionamento_C-Sharp/obj/Debug/net10.0/sistemaEstacionamento_C-Sharp.genruntimeconfig.cache
 /home/pedro-dos-anjos/sistemaEstacionamento_C-Sharp/obj/Debug/net10.0/ref/sistemaEstacionamento_C-Sharp.dll
+/home/pedro-dos-anjos/sistemaEstacionamento_C-Sharp/obj/Debug/net10.0/sistemaEstacionamento_C-Sharp.sourcelink.json
