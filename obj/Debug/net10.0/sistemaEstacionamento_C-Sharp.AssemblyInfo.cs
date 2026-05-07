@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("sistemaEstacionamento_C-Sharp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1bd87f235b5531bb00c54468ec4e1c5049cad2cf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8cd5c9773a8d0d676fa1c6dcaaa10fe7dc9eb020")]
 [assembly: System.Reflection.AssemblyProductAttribute("sistemaEstacionamento_C-Sharp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("sistemaEstacionamento_C-Sharp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
