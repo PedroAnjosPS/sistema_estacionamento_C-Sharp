@@ -22,33 +22,66 @@ namespace sistemaEstacionamento_C_Sharp.Models
 
         public void AdicionarVeiculo()
         {
-            string veiculo = "";
+            string placa = "";
 
+            // Valida o a máscara (o formato do conteúdo) e caracteres permitidos na placa do veículo
             do
             {
                 Console.Clear();
                 Console.Write("\nDigite a placa do veículo para estacionar: ");
-                veiculo = Console.ReadLine();
+                placa = Console.ReadLine().ToUpper();
 
-                if (veiculo.Length != 7 || !veiculo.Contains("-"))
+                if (placa.Length != 8 || !placa.Contains("-"))
                 {
                     Console.WriteLine("Formato de placa de veículo incorreto! Digite novamente!");
                     Thread.Sleep(1000);
                 }
-            } while (veiculo.Length != 7 || !veiculo.Contains("-"));
+            } while (placa.Length != 8 || !placa.Contains("-"));
 
-            veiculos.Add(veiculo);
+            veiculos.Add(placa);
 
             Console.WriteLine("Veículo estacionado com sucesso!");
         }
 
         public void RemoverVeiculo()
         {
-            veiculos.Remove("veiculo");
+            string placa = string.Empty;
+
+            // Valida o a máscara (o formato do conteúdo) e caracteres permitidos na placa do veículo
+            do
+            {
+                Console.Clear();
+                Console.Write("\nDigite a placa de um carro estacionado: ");
+                placa = Console.ReadLine().ToUpper();
+
+                if (placa.Length != 8 || !placa.Contains("-"))
+                {
+                    Console.WriteLine("Formato de placa de veículo incorreto! Digite novamente!");
+                    Thread.Sleep(1000);
+                }
+            } while (placa.Length != 8 || !placa.Contains("-"));
+
+            // verifica se existe a placa de veículo informada pelo usuário no estacionamento 
+            if (veiculos.Contains(placa))
+            {
+                Console.Write("\nDigite a quantidade de horas que o veículo permaneceu estacionado: ");
+                int horas = Convert.ToInt32(Console.ReadLine());
+
+                decimal valorTotal = precoInicial + precoPorHora * horas;
+
+                // Removendo a placa do veículo estacionado
+                veiculos.Remove(placa);
+                Console.WriteLine($"O veículo de placa {placa} foi removido do estacionamento. O preço total foi de R$ {valorTotal:F2}!");
+            }
+            else
+            {
+                Console.WriteLine("Desculpe, esse veículo não está estacionado aqui.");
+            }
         }
 
         public void ListarVeiculos()
         {
+            // Verifica se há algum conteúdo dentro da lista de veículos
             if (veiculos.Any())
             {
                 Console.WriteLine("\nVeículos estacionados:");
@@ -56,12 +89,13 @@ namespace sistemaEstacionamento_C_Sharp.Models
 
                 foreach (string veic in veiculos)
                 {
-                    Console.WriteLine(i + veic);
+                    Console.WriteLine(i + " - " + veic);
+                    i++;
                 }
             }
             else
             {
-                Console.WriteLine("\nNão há veículos estacionados.");
+                Console.WriteLine("\nNão há veículos estacionados!");
             }
         }
 

@@ -34,12 +34,14 @@ do
     {
         case "1":
             estacionamento.AdicionarVeiculo();
-            Thread.Sleep(1700);
+            Thread.Sleep(1200);
             break;
 
         case "2":
             estacionamento.RemoverVeiculo();
-            Thread.Sleep(1700);
+            Thread.Sleep(1200);
+            Console.Write("\nPressione qualquer tecla para prosseguir a execução do programa:");
+            opcao = Console.ReadLine();
             break;
 
         case "3":
@@ -51,12 +53,12 @@ do
         case "4":
             exibirMenu = false;
             Console.WriteLine("\nSaindo do sistema...");
-            Thread.Sleep(1700);
+            Thread.Sleep(1200);
             break;
 
         default:
             Console.WriteLine("\nOpção inválida!");
-            Thread.Sleep(1700);
+            Thread.Sleep(1200);
             break;    
     }
 
